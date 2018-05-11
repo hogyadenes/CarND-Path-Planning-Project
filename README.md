@@ -19,11 +19,16 @@ The lane changing logic contains some constraints as well. First it calculates a
 
 The path itself is calculated using the suggested spline library. First I used 30 path points but the car responded too slow so I decreased this list to only 10 points (I have a powerful computer so the calculations happened really fast but on a slower computer more points might be needed).
 
+As the car progresses along the path the remaining path points are kept in each iteration which guarantees that the car follows a jerk-free path.
+
 I made and uploaded a video of my performance to YouTube:
 
 
 The video is 22 minutes long (without incidents) but the runtime was actually 30 minutes. In 30 minutes the car covered 23.67 miles which means the average speed was 47.34mph (it is really great considering sometimes there is high traffic on the lanes and the max speed I used is 49.5mph)
 
+## Remaining problems
+
+I have seen some incidents when other cars tried to change lanes (and they changed to our lane fast and unexpectedly). This, of course, ended up in a collision as it could only be prevented with emergency braking (which is not allowed in the project). It might be avoidable if all the other cars' trajectories would be estimated (right now I only use the speed information and assume that the car will keep its lane and this could cause problems). Nevertheless, the solution I programmed is pretty reliable and this particular issue did not happen during the last couple of hours of testing.
 
 ## Basic Build Instructions
 
