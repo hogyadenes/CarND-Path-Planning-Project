@@ -22,7 +22,7 @@ The path itself is calculated using the suggested spline library. First I used 3
 As the car progresses along the path the remaining path points are kept in each iteration which guarantees that the car follows a jerk-free path.
 
 I made and uploaded a video of my performance to YouTube:
-
+https://youtu.be/V4ruTO1bIX0
 
 The video is 22 minutes long (without incidents) but the runtime was actually 30 minutes. In 30 minutes the car covered 23.67 miles which means the average speed was 47.34mph (it is really great considering sometimes there is high traffic on the lanes and the max speed I used is 49.5mph)
 
