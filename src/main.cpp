@@ -12,7 +12,7 @@
 
 #define MAX_SPEED      49.5
 #define MAX_ACC        0.224
-#define MIN_SCORE_DIFF 10
+#define MIN_SCORE_DIFF 20.0
 
 using namespace std;
 
@@ -214,7 +214,7 @@ public:
     if(dist_ahead_<10) score_ = 0;
     else if(dist_behind_<8) score_ = 0;
     else if(dist_behind_<12 && min_speed_ > act_speed) score_ = 0; //other car too close
-    else score_ = max_speed_ + dist_ahead_ + id_;
+    else score_ = 2*max_speed_ + dist_ahead_ + id_;
     //printf("LANE:%d SCORE=%g (MAX_SPEED=%g DIST_AHEAD=%g DIST_BEHIND=%g)\n", id_, score_, max_speed_, dist_ahead_, dist_behind_);
     return score_;
   }
@@ -365,7 +365,7 @@ int main() {
               for(int i=0; i<3; i++) printf("LANE %d SCORE=%g MAX_SPEED=%g\n", i, lanes[i].get_score(), lanes[i].get_max_speed());
             }
                    
-            double target_speed = lanes[act_lane].get_max_speed(); 
+            double target_speed = lanes[lane].get_max_speed(); 
            
             // Behavior : Let's see what to do.
             double speed_diff = target_speed - ref_speed;
