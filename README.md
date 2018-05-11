@@ -19,6 +19,12 @@ The lane changing logic contains some constraints as well. First it calculates a
 
 The path itself is calculated using the suggested spline library. First I used 30 path points but the car responded too slow so I decreased this list to only 10 points (I have a powerful computer so the calculations happened really fast but on a slower computer more points might be needed).
 
+I made and uploaded a video of my performance to YouTube:
+
+
+The video is 22 minutes long (without incidents) but the runtime was actually 30 minutes. In 30 minutes the car covered 23.67 miles which means the average speed was 47.34mph (it is really great considering sometimes there is high traffic on the lanes and the max speed I used is 49.5mph)
+
+
 ## Basic Build Instructions
 
 You can download the Term3 Simulator which contains the Path Planning Project from the [releases tab (https://github.com/udacity/self-driving-car-sim/releases/tag/T3_v1.2).
